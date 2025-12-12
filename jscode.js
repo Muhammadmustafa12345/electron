@@ -33,6 +33,14 @@ function createWindow() {
 app.whenReady().then(() => {
     createWindow()
 })
+app.on('before-quit', (e)=>{
+    e.preventDefault();
+    
+})
+app.on('ready' , ()=>{
+    createWindow();
+    console.log('ready');
+})
 
 
 
